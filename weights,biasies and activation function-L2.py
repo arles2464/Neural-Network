@@ -1,0 +1,5 @@
+#network parameters(weights and biases) are set and initialized(Layer2)
+W2 = tf.Variable(tf.random_normal([n_neurons_in_h1, n_neurons_in_h2],mean=0,stddev=1/np.sqrt(n_features)),name='weights2')
+b2 = tf.Variable(tf.random_normal([n_neurons_in_h2],mean=0,stddev=1/np.sqrt(n_features)),name='biases2')
+#activation function(sigmoid)
+y2 = tf.nn.sigmoid((tf.matmul(y1,W2)+b2),name='activationLayer2')
